@@ -1,0 +1,1 @@
+module JogoDaVelha {    requires javafx.fxml;    requires javafx.graphics;    requires javafx.controls;    opens br.com.jogodavelha.telas.telaJogo;    opens br.com.jogodavelha.telas.telaInicial;    opens br.com.jogodavelha.telas.telaJogador;    opens br.com.jogodavelha.telas.telaFinal;    opens br.com.jogodavelha;}

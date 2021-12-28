@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="231.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.jogodavelha.telas.telaInicial.TelaInicoFXML">
+   <children>
+      <Label alignment="CENTER" layoutX="83.0" layoutY="14.0" prefHeight="29.0" prefWidth="434.0" text="Escolha ou Opção">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="390.0" layoutY="90.0" mnemonicParsing="false" onAction="#Jogadores2">
+         <graphic>
+            <ImageView fitHeight="104.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/escolhaJogador/2Jogadores.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="84.0" layoutY="90.0" mnemonicParsing="false" onAction="#jogadores1">
+         <graphic>
+            <ImageView fitHeight="104.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/escolhaJogador/1Jogador.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label alignment="CENTER" layoutX="390.0" layoutY="51.0" prefHeight="29.0" prefWidth="120.0" text="2 Jogadores">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="84.0" layoutY="51.0" prefHeight="29.0" prefWidth="120.0" text="1 Jogadores">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

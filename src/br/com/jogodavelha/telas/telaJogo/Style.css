@@ -1,0 +1,7 @@
+.label{
+    -fx-alignment: CENTER;
+}
+GridPane {
+   -fx-alignment: CENTER;
+   -fx-grid-lines-visible: true;
+}

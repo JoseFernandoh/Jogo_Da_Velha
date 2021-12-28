@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="280.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="27.0" layoutY="219.0" mnemonicParsing="false" onAction="#novoJogo" prefHeight="44.0" prefWidth="114.0" text="Novo Jogo" />
+      <Button layoutX="452.0" layoutY="219.0" mnemonicParsing="false" onAction="#sairDoJogo" prefHeight="44.0" prefWidth="114.0" text="Sair do Jogo" />
+      <Label fx:id="titulo" alignment="CENTER" layoutX="96.0" layoutY="7.0" prefHeight="27.0" prefWidth="140.0" text="Vencedor">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgVencedor" fitHeight="150.0" fitWidth="129.0" layoutX="101.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="nomeVencedor" alignment="CENTER" layoutX="210.0" layoutY="214.0" prefHeight="27.0" prefWidth="180.0" text="Nome Jogador">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="396.0" layoutY="7.0" prefHeight="27.0" prefWidth="140.0" text="Jogo">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
