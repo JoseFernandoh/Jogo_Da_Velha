@@ -4,11 +4,13 @@ import br.com.jogodavelha.TestarJogo.TestarResultado;
 import br.com.jogodavelha.configJogo.Jogador;
 import br.com.jogodavelha.configJogo.JogadorIA;
 import br.com.jogodavelha.configJogo.Jogando;
+import br.com.jogodavelha.telas.imgFundo.AdicionarFundo;
 import br.com.jogodavelha.telas.telaFinal.TelaFinalFXML;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.SplitPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -60,8 +62,17 @@ public class TelaJogoIAFXML implements Initializable {
     @FXML
     private Label vezJogador;
 
+    @FXML
+    private SplitPane telaFundo;
+
+    @FXML
+    private ImageView img2Jogador;
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        img2Jogador.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/br/com/jogodavelha/telas/icon/jogadores/Conputador.png"))));
+        telaFundo.setBackground(AdicionarFundo.addFundo());
         alternarJogador = selectAleatorio[ThreadLocalRandom.current().nextInt(2)];
         mudarJogador();
         selecionados = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -103,7 +114,7 @@ public class TelaJogoIAFXML implements Initializable {
             } else if (n == -1) {
                 jogador1.setDerrota();
                 jogador2.setVitoria();
-                telaFinalFXML = new TelaFinalFXML(jogador2, jogando, new Image(Objects.requireNonNull(getClass().getResourceAsStream("/br/com/jogodavelha/telas/icon/jogadores/Jogador2.png"))), jogodavelha);
+                telaFinalFXML = new TelaFinalFXML(jogador2, jogando, new Image(Objects.requireNonNull(getClass().getResourceAsStream("/br/com/jogodavelha/telas/icon/jogadores/Conputador.png"))), jogodavelha);
             }
         }
         jogando.telaVitoria(telaFinalFXML);
@@ -144,8 +155,8 @@ public class TelaJogoIAFXML implements Initializable {
 
     public void vezIa() {
         try {
-            TimeUnit.MILLISECONDS.sleep(500);
-            int n = JogadorIA.getNamber(selecionados);
+            TimeUnit.MILLISECONDS.sleep(700);
+            int n = JogadorIA.IA(selecionados);
             AnchorPane anchorPane = (AnchorPane) jogodavelha.getChildren().get(n);
             ImageView imageView = (ImageView) anchorPane.getChildren().get(0);
             selecionados[n] = alternarJogador;

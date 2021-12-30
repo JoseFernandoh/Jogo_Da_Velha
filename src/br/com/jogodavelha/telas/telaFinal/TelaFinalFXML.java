@@ -2,6 +2,7 @@ package br.com.jogodavelha.telas.telaFinal;
 
 import br.com.jogodavelha.configJogo.Jogador;
 import br.com.jogodavelha.configJogo.Jogando;
+import br.com.jogodavelha.telas.imgFundo.AdicionarFundo;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -43,6 +44,7 @@ public class TelaFinalFXML implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        pane.setBackground(AdicionarFundo.addFundo());
         diminuirimg();
         tabelaJogo.setGridLinesVisible(true);
         tabelaJogo.setPrefWidth(190);

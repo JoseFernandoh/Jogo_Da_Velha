@@ -24,8 +24,6 @@ public class Jogando {
         jogar();
     }
 
-
-
     public void jogar(){
         try {
             FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource("/br/com/jogodavelha/telas/telaJogo/TelaJogoFXML.fxml")));
@@ -64,7 +62,8 @@ public class Jogando {
         Jogando.jogarIA = jogarIA;
     }
 
-    public static boolean isJogarIA() {
-        return jogarIA;
+    public static boolean isJogarIA(){
+        return Jogando.jogarIA;
     }
+
 }

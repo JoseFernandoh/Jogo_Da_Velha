@@ -1,7 +1,14 @@
 .label{
     -fx-alignment: CENTER;
+    -fx-font-weight: bold;
 }
 GridPane {
    -fx-alignment: CENTER;
    -fx-grid-lines-visible: true;
+}
+.split-pane:horizontal > .split-pane-divider {
+   -fx-background-color: transparent;
+}
+.split-pane:vertical > .split-pane-divider {
+   -fx-background-color: transparent;
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -11,18 +10,18 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.shape.Polyline?>
 
-<SplitPane dividerPositions="0.1875, 0.2717391304347826" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="370.0" prefWidth="461.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane fx:id="telaFundo" dividerPositions="0.1875, 0.25" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="370.0" prefWidth="461.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
   <items>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
             <Polyline fx:id="jogadorX" fill="CHARTREUSE" layoutX="50.0" layoutY="40.0" points="-51.0, -41.0, 159.0, -41.0, 203.0, 26.0, -50.0, 26.0" strokeType="INSIDE" />
-            <Polyline fx:id="jogadorO" fill="#424641" layoutX="396.0" layoutY="4.0" points="66.0, -5.0, 66.0, 62.0, -144.0, 62.0, -187.0, -5.0" strokeType="INSIDE" />
+            <Polyline fx:id="jogadorO" fill="#424641" layoutX="394.0" layoutY="4.0" points="66.0, -5.0, 66.0, 62.0, -144.0, 62.0, -187.0, -5.0" strokeType="INSIDE" />
             <ImageView fitHeight="71.0" fitWidth="47.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../icon/jogadores/Jogador1.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="69.0" fitWidth="47.0" layoutX="401.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="img2Jogador" fitHeight="69.0" fitWidth="47.0" layoutX="401.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../icon/jogadores/Jogador2.png" />
                </image>
@@ -38,12 +37,10 @@
          <children>
             <Label fx:id="statusInpate" layoutX="175.0" prefHeight="18.0" prefWidth="97.0" text="E: 0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
             <Label fx:id="statusJogador2" layoutX="275.0" prefHeight="18.0" prefWidth="185.0" text="V: 0 D: 0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Separator layoutX="169.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="169.0" AnchorPane.rightAnchor="284.0" AnchorPane.topAnchor="0.0" />
-            <Separator layoutX="272.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
             <Label fx:id="statusJogador1" layoutY="1.0" prefHeight="17.0" prefWidth="170.0" text="V: 0 D: 0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
          </children>
       </AnchorPane>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="273.0" prefWidth="459.0">
          <children>
             <GridPane fx:id="jogodavelha" layoutX="119.0" layoutY="46.0" prefHeight="190.0" prefWidth="222.0">
               <columnConstraints>

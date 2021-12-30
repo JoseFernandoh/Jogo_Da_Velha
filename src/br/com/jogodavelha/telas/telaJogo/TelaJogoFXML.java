@@ -3,10 +3,12 @@ package br.com.jogodavelha.telas.telaJogo;
 import br.com.jogodavelha.TestarJogo.TestarResultado;
 import br.com.jogodavelha.configJogo.Jogador;
 import br.com.jogodavelha.configJogo.Jogando;
+import br.com.jogodavelha.telas.imgFundo.AdicionarFundo;
 import br.com.jogodavelha.telas.telaFinal.TelaFinalFXML;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.SplitPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -50,15 +52,19 @@ public class TelaJogoFXML implements Initializable {
     @FXML
     private Label vezJogador;
 
+    @FXML
+    private SplitPane telaFundo;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        telaFundo.setBackground(AdicionarFundo.addFundo());
         alternarJogador = selectAleatorio[ThreadLocalRandom.current().nextInt(2)];
         selecionados = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0};
         mudarJogador();
         statusJogador1.setText("V: " + jogador1.getVitoria() + " D: " + jogador1.getDerrota());
         statusJogador2.setText("V: " + jogador2.getVitoria() + " D: " + jogador2.getDerrota());
         statusInpate.setText("E: " + jogando.getInpat());
-
+        lugarSobrando = 9;
         for (byte i = 0; i < 9; i++) {
             mudarImg(i);
         }

@@ -3,11 +3,13 @@ package br.com.jogodavelha.telas.telaJogador;
 import br.com.jogodavelha.configJogo.Jogador;
 import br.com.jogodavelha.configJogo.Jogando;
 import br.com.jogodavelha.configJogo.TIPOS;
+import br.com.jogodavelha.telas.imgFundo.AdicionarFundo;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
@@ -50,10 +52,17 @@ public class TelaJogadorFXML implements Initializable {
     private AnchorPane fundoJogador2;
 
     @FXML
+    private AnchorPane paneFundo;
+
+    @FXML
     private Label selectJogador;
+
+    @FXML
+    private ImageView img2Jogador;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        paneFundo.setBackground(AdicionarFundo.addFundo());
         int cont = 0;
         for (TIPOS tipo : TIPOS.values()) {
             configIconImg(cont,tipo);
@@ -119,5 +128,13 @@ public class TelaJogadorFXML implements Initializable {
 
     public void setStage(Stage stage) {
         this.stage = stage;
+    }
+
+    public void setIma2(Image image){
+        img2Jogador.setImage(image);
+    }
+
+    public void setNameJogador2(String str) {
+        nomeJogador2.setText(str);
     }
 }
