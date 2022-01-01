@@ -8,8 +8,8 @@
 
 <AnchorPane fx:id="pane" prefHeight="280.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="27.0" layoutY="219.0" mnemonicParsing="false" onAction="#novoJogo" prefHeight="44.0" prefWidth="114.0" text="Novo Jogo" />
-      <Button layoutX="452.0" layoutY="219.0" mnemonicParsing="false" onAction="#sairDoJogo" prefHeight="44.0" prefWidth="114.0" text="Sair do Jogo" />
+      <Button fx:id="sairDoJogo" layoutX="452.0" layoutY="219.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="114.0" text="Sair do Jogo" />
+      <Button fx:id="novoJogo" layoutX="27.0" layoutY="219.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="114.0" text="Novo Jogo" />
       <Label fx:id="titulo" alignment="CENTER" layoutX="96.0" layoutY="7.0" prefHeight="27.0" prefWidth="140.0" text="Vencedor">
          <font>
             <Font size="18.0" />

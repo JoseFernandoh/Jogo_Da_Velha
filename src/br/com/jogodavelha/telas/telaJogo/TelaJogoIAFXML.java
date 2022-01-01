@@ -95,14 +95,12 @@ public class TelaJogoIAFXML implements Initializable {
                 mudarImg(imageView, jogador1.getTipo().getSurce());
             }
         });
-        imageView.imageProperty().addListener((observableValue, image, t1) -> {
-            testeJogo();
-        });
+        imageView.imageProperty().addListener((observableValue, image, t1) -> testeJogo());
 
     }
 
     public void terminarJogo(int n) {
-        TelaFinalFXML telaFinalFXML = null;
+        TelaFinalFXML telaFinalFXML;
         if (n == 0) {
             telaFinalFXML = new TelaFinalFXML(null, jogando, new Image(Objects.requireNonNull(getClass().getResourceAsStream("/br/com/jogodavelha/telas/icon/jogadores/Empate.png"))), jogodavelha);
             jogando.setInpat();
@@ -111,7 +109,7 @@ public class TelaJogoIAFXML implements Initializable {
                 telaFinalFXML = new TelaFinalFXML(jogador1, jogando, new Image(Objects.requireNonNull(getClass().getResourceAsStream("/br/com/jogodavelha/telas/icon/jogadores/Jogador1.png"))), jogodavelha);
                 jogador1.setVitoria();
                 jogador2.setDerrota();
-            } else if (n == -1) {
+            } else{
                 jogador1.setDerrota();
                 jogador2.setVitoria();
                 telaFinalFXML = new TelaFinalFXML(jogador2, jogando, new Image(Objects.requireNonNull(getClass().getResourceAsStream("/br/com/jogodavelha/telas/icon/jogadores/Conputador.png"))), jogodavelha);

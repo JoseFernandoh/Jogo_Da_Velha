@@ -21,7 +21,6 @@ public class TelaInicoFXML implements Initializable {
     @FXML
     private AnchorPane paneFundo;
 
-
     private Stage stage;
 
     @Override

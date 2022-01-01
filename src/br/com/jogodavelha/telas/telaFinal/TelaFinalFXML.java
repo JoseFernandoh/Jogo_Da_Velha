@@ -6,6 +6,7 @@ import br.com.jogodavelha.telas.imgFundo.AdicionarFundo;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -16,7 +17,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class TelaFinalFXML implements Initializable {
-    private Jogador jogadorVencedor = null;
+    private final Jogador jogadorVencedor;
     private final Jogando controller;
     private final Image image;
     private final GridPane tabelaJogo;
@@ -34,6 +35,13 @@ public class TelaFinalFXML implements Initializable {
     @FXML
     private AnchorPane pane;
 
+    @FXML
+    private Button novoJogo;
+
+    @FXML
+    private Button sairDoJogo;
+
+
 
     public TelaFinalFXML(Jogador jogadorVencedor, Jogando controller, Image image, GridPane tabelaJogo) {
         this.jogadorVencedor = jogadorVencedor;
@@ -44,6 +52,8 @@ public class TelaFinalFXML implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        novoJogo.setOnAction(e -> controller.jogar());
+        sairDoJogo.setOnAction(e -> Platform.exit());
         pane.setBackground(AdicionarFundo.addFundo());
         diminuirimg();
         tabelaJogo.setGridLinesVisible(true);
@@ -71,13 +81,5 @@ public class TelaFinalFXML implements Initializable {
             imageView.setFitWidth(50);
 
         }
-    }
-
-    public void novoJogo(){
-        controller.jogar();
-    }
-
-    public void sairDoJogo(){
-        Platform.exit();
     }
 }
