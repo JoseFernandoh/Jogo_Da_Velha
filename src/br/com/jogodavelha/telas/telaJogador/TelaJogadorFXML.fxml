@@ -13,14 +13,14 @@
 
 <AnchorPane fx:id="paneFundo" prefHeight="338.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.jogodavelha.telas.telaJogador.TelaJogadorFXML">
    <children>
-      <TextField fx:id="nomeJogador1" layoutX="41.0" layoutY="179.0" promptText="Nome Do Jogador" />
-      <TextField fx:id="nomeJogador2" disable="true" layoutX="395.0" layoutY="179.0" promptText="Nome Do Jogador" />
+      <TextField fx:id="nomeJogador1" focusTraversable="false" layoutX="41.0" layoutY="179.0" promptText="Nome Do Jogador" text="Jogador 1" />
+      <TextField fx:id="nomeJogador2" disable="true" focusTraversable="false" layoutX="395.0" layoutY="179.0" promptText="Nome Do Jogador" text="Jogador 2" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="250.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icon/jogadores/VS.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="235.0" layoutY="179.0" prefHeight="25.0" prefWidth="149.0" text="Escolha ou Opção:">
+      <Label alignment="CENTER" layoutX="235.0" layoutY="179.0" prefHeight="25.0" prefWidth="149.0" text="Escolha uma Opção:">
          <font>
             <Font size="14.0" />
          </font>

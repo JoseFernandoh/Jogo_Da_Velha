@@ -83,9 +83,8 @@ public class TelaJogoFXML implements Initializable {
         imageView.setOnMouseClicked(e -> {
             if (imageView.getImage() == null) {
                 Supplier<Jogador> j = () -> alternarJogador == 1 ? jogador1 : jogador2;
-                Jogador jogador = j.get();
                 selecionados[n] = alternarJogador;
-                mudarImg(imageView, jogador.getTipo().getSurce());
+                mudarImg(imageView, j.get().getTipo().getSurce());
                 testeJogo();
             }
         });

@@ -159,7 +159,6 @@ public class TelaJogoIAFXML implements Initializable {
             ImageView imageView = (ImageView) anchorPane.getChildren().get(0);
             selecionados[n] = alternarJogador;
             new Thread(() -> Platform.runLater(() -> mudarImg(imageView, jogador2.getTipo().getSurce()))).start();
-            Thread.currentThread().join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
