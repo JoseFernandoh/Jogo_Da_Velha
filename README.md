@@ -24,3 +24,5 @@ Video Jogando contra a Ia do projeto
   <video width="320" height="240" controls>
     <source src="https://user-images.githubusercontent.com/87836325/174067717-1c4ee981-9881-499c-8d0a-6e18b1f17b47.mp4" type="video/mp4">
 </div>
+
+  https://user-images.githubusercontent.com/87836325/174067717-1c4ee981-9881-499c-8d0a-6e18b1f17b47.mp4
