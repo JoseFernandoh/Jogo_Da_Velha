@@ -21,6 +21,7 @@ public class JogoDaVelha extends Application {
             FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource("telas/telaInicial/TelaInicoFXML.fxml")));
             primaryStage.setScene(new Scene(loader.load()));
             primaryStage.setTitle("Jogo Da Velha");
+            primaryStage.setResizable(false);
             primaryStage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("telas/icon/jogoIcon/IconJogoDaVelha.png"))));
             primaryStage.show();
             ((TelaInicoFXML)loader.getController()).setStage(primaryStage);
